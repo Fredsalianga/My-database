@@ -1,2 +1,6 @@
 # My-database
-My database
+AWS CLOUD COMPUTING 
+LINUX 
+PYTHON 
+NETWORKING 
+SYSTEM ADMIN
