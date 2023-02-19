@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# set your name and the number of files to create 
+
+
+name="UserFile"
+num_files=200
+
+#find the maximum number that already exists in the current directory
+max_number=$(ls | grep -E "^${name}[0-9]+$" | sed "s/${name}//g" | sort -n | sort -n | tail -1)
+
+# if no files exist start with 0, otherwise start with the next number
+if [ -z "$max_num"]; then
+  start_num=0
+else
+ start_num=$((max_num + 1))
+fi
+
+# create the files
+for ((i=start_num; i<start_num+num_files; i++)); do
+  touch "${name}${i}"
+done
+
+# display the contents of the dictionary
+ls -l
