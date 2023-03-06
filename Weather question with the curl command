@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Ask name
+read -p "What is your name? :" name
+
+
+echo "Hello $name, please dress accordingly to the weather. 
+Have a good day!"
+
+# Time code
+current_time=$(date +"%r")
+
+
+# Use the curl command to get the current weather from wttr.in
+
+weather=$(curl -s wttr.in/Boston,MA)
+
+#  message with the current time and weather
+echo "$name! The current time is $current_time. Here is the current weather:"
+echo ""
+echo "$weather"
